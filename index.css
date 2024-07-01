@@ -1,0 +1,1239 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+body {
+  background-color: var(--plain-dark);
+  margin: 0 3rem;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+:root {
+  --main-color: #9428f9;
+  --plain-dark: #141414;
+  --dark75: #2c2c2c;
+  --dark50: #5a5a5a;
+  --dark25: #8c8c8c;
+  --Grey: hsl(231, 7%, 60%);
+}
+header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--plain-dark);
+  transition: 0.3s;
+}
+.menu-icon {
+  display: none;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 2rem;
+  height: 0.3rem;
+  background-color: var(--main-color);
+  margin: 0.4rem 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+.header-logo {
+  max-width: 10rem;
+}
+.search-content {
+  width: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c2c2c;
+  padding: 0.5rem 0.5rem;
+  border-radius: 1.5rem;
+  position: relative;
+}
+.search-button {
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.search-input {
+  width: 27rem;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: #c4c4c4;
+}
+.search-input:focus {
+  color: #c4c4c4;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1;
+}
+.my-search-result {
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+.search-result {
+  display: none;
+  width: 100%;
+  height: 26rem;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--dark75);
+  overflow-y: auto;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  z-index: 1;
+}
+.search-result.active{
+  
+}
+.search-result h4 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.recommended {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.s-celebrity-dp {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.category {
+  display: flex;
+  align-items: center;
+  color: #c4c4c4;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0.5rem;
+  border-left: 1px solid var(--dark50);
+  cursor: pointer;
+}
+.sign-up-btn {
+  width: 10rem;
+  padding: 1rem 0;
+  border-radius: 1.5rem;
+  color: #ffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--main-color);
+  background-color: #2e2239;
+  cursor: pointer;
+}
+.sign-in-btn {
+  width: 10rem;
+  padding: 1rem 0;
+  border-radius: 1.5rem;
+  color: #ffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+.login-btn,
+.create-acct {
+  cursor: pointer;
+  font-weight: 500;
+}
+.desktop-img {
+  max-width: 100%;
+  height: 100%;
+  border: 0.5rem;
+  background-image: linear-gradient(
+      90deg,
+      rgba(112, 0, 217, 1),
+      rgba(148, 40, 249, 0)
+    ),
+    url(./Assets/Images/Desktop-hero-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  /* position: relative; */
+}
+.desktop-img h1 {
+  max-width: 40rem;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 12.5% 0 12.5% 5rem;
+}
+.selection-tab {
+  max-width: 100%;
+  margin: 2rem 0;
+  transition: 0.3s;
+}
+.selection-tab ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  overflow: auto;
+}
+.selection-tab ul::-webkit-scrollbar,
+.search-result::-webkit-scrollbar {
+  display: none;
+}
+.selection-tab ul li {
+  list-style: none;
+  color: #fff;
+  width: 12rem;
+  max-height: 3rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background-color: var(--dark75);
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.featured,
+.categories,
+.artist,
+.actors {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: 0.3s;
+}
+#featured,
+#categories,
+#artist,
+#athletes,
+#content-creator,
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#featured h2,
+#categories h2,
+#artist h2,
+#athletes h2,
+#content-creator h2,
+.reviews h2,
+.buzzes h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 1.75rem 0;
+  cursor: pointer;
+}
+#featured button,
+#categories button,
+.upper-content-text button,
+#artist button,
+#athletes button,
+#content-creator button,
+.reviews button {
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.featured-content,
+.categories-content,
+.artist-content,
+.content-creator-content,
+.athletes-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.featured-content::-webkit-scrollbar,
+.categories-content::-webkit-scrollbar,
+.artist-content::-webkit-scrollbar,
+.content-creator::-webkit-scrollbar,
+.account-request::-webkit-scrollbar,
+.athletes-content::-webkit-scrollbar,
+.content-creator-content::-webkit-scrollbar {
+  display: none;
+}
+
+.celebrity,
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+.celebrity-img,
+.categories-img {
+  width: 13rem;
+  height: 19rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.celebrity-id,
+.celebrity-search-id {
+  margin: 0.5rem 0;
+}
+.celebrity-img img,
+.categories-img img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.celebrity-img img:hover,
+.categories-img img:hover {
+  opacity: 0.4;
+  transform: scaleX(1.1);
+}
+.celebrity-id h3,
+.celebrity-search-id h3,
+.categories-id h3,
+.upper-content-text h3 {
+  color: #fff;
+  font-size: 1.5;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+.celebrity-id p,
+.celebrity-search-id p {
+  color: var(--dark25);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.search-result,
+.celebrity-id h3,
+.celebrity-search-id h3 {
+  margin: 0;
+}
+.categories-img {
+  width: 18rem;
+  height: 11rem;
+}
+
+.content {
+  width: 100%;
+  /* height: 90rem; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-direction: column;
+  margin: 6rem 0;
+  padding: 3rem;
+  background-color: #000;
+}
+.upper-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.upper-content-img,
+.upper-content-text {
+  width: 50%;
+  height: 25rem;
+  flex: 1 1 0;
+}
+.upper-content-img img {
+  border-radius: 1rem;
+}
+.upper-content-text h5,
+.lower-contents-id h5 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 2rem 0 0.5rem 0;
+}
+.upper-content-text p,
+.lower-contents-id p {
+  color: #c4c4c4;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 1.5rem 0;
+}
+.lower-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.lower-contents {
+  width: 30%;
+  flex: 1 1 auto;
+}
+.lower-content img {
+  border-radius: 1.5rem;
+}
+.lower-contents-id h5 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0.5rem 0 0.5rem 0;
+}
+.lower-contents-id p {
+  color: #c4c4c4;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.17;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.italic {
+  font-style: italic;
+}
+.discover-btn,
+.subscribe button {
+  display: block;
+  width: 10rem;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  color: #ffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 0;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+/* Footer design */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 20rem;
+  background-color: #1e1e1e;
+  padding: 5.5rem 7rem;
+  margin: 0 -3rem;
+}
+.subscribe,
+.links,
+.celebrity-sign-up {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+.subscribe h4 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 2;
+}
+.subscribe p {
+  width: 21.5rem;
+  color: #c4c4c4;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625;
+}
+.subscribe input {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  width: 23rem;
+  height: 3.25rem;
+  font-size: 0.9rem;
+  color: #c4c4c4;
+  background: transparent;
+  outline: 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--dark25);
+  display: inline;
+  cursor: pointer;
+}
+.subscribe input:focus {
+  font-size: 1rem;
+  border: 2px solid var(--main-color);
+  display: inline;
+}
+.subscribe button {
+  display: inline;
+  padding: 1rem 0;
+  margin-left: 1rem;
+  border-radius: 2rem;
+  color: #ffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 0;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.links ul li {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.61;
+  color: #fff;
+}
+.celebrity-sign-up {
+  width: 20rem;
+}
+.celebrity-sign-up p {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.174;
+}
+.celebrity-sign-up button {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  margin: 1rem 0 1.5rem 0;
+  border: 0;
+  border-radius: 2rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+.celebrity-sign-up .copyright {
+  color: var(--dark25);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.17;
+}
+.user-info {
+  display: block;
+}
+.user-details {
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* Sign up form design */
+.header-overlay {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--plain-dark);
+}
+.logo-overlay {
+  margin: 1rem auto;
+}
+.account-request {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--plain-dark);
+  overflow-y: auto;
+}
+.sign-up,
+.sign-in {
+  color: #fff;
+  border-radius: 1.5rem;
+  background-color: var(--dark75);
+  width: 40rem;
+  padding: 4rem 4rem 4rem 4rem;
+  margin: 0 auto;
+  display: none;
+}
+.sign-in-content #p1 {
+  margin-bottom: 2rem;
+}
+#p1 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+#p1 span {
+  text-transform: uppercase;
+}
+#p2 {
+  width: 21rem;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem auto;
+  color: #c4c4c4;
+}
+.facebook-sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 31rem;
+  background-color: #287cf9;
+}
+.google-sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  border-radius: 31rem;
+  color: var(--plain-dark);
+  background-color: #fff;
+}
+.google-img {
+  width: 1rem;
+}
+#p4 {
+  width: 12rem;
+  background-color: var(--dark75);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: -2.7rem auto;
+}
+form {
+  margin-top: 3rem;
+}
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+form input {
+  width: 100%;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--dark25);
+  background-color: transparent;
+  cursor: pointer;
+}
+form input:focus {
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid var(--main-color);
+}
+.password-input1,
+.confirm-password,
+.password-input2 {
+  position: relative;
+}
+.eye-icon,
+.cp-eye-icon,
+.signin-eye-icon {
+  display: none;
+  position: absolute;
+  top: 2.8rem;
+  right: 1rem;
+  color: var(--dark25);
+  cursor: pointer;
+}
+.check-input {
+  width: 3%;
+  cursor: pointer;
+}
+.check-label {
+  display: inline;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+.sign-up-submit,
+.sign-in-submit {
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  margin-bottom: 4rem;
+  border-radius: 31rem;
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+}
+#p5 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #c4c4c4;
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+#p6 {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+#p6 span {
+  color: var(--main-color);
+}
+.overlay-footer {
+  margin-top: 10rem;
+}
+/* Login modal style */
+.login-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.login-request {
+  width: 37rem;
+  padding: 4rem;
+  margin: 6.25rem auto;
+  border-radius: 1.5rem;
+  background-color: var(--dark75);
+}
+.login-request button {
+  width: 100%;
+}
+.signin-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.close-form {
+  display: none;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.account-request.close {
+  display: none;
+}
+.check-label {
+  display: inline-block;
+  height: 1rem;
+}
+.check-label input {
+  min-width: 3rem;
+  cursor: pointer;
+}
+.mssg {
+  width: 100%;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+}
+.display-none {
+  display: none;
+}
+/* Profile page styling */
+.celebrity-profile {
+  width: 75%;
+  margin: 3rem auto;
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+}
+.profile-picture {
+  width: 13rem;
+  height: 13rem;
+  border: 0.5rem solid #ca90ff;
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+.profile-picture img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profile-info {
+  width: 31rem;
+}
+.profile-info h2{
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+.profile-info p {
+  color: #c4c4c4;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+.edit-btn button {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  color: #ffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 0;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+.profile-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.profile-review {
+  width: 30%;
+  /* min-width: 20%; */
+  flex: 1 1 auto;
+  padding: 1.5rem;
+  background-color: var(--dark75);
+  border-radius: 1.25rem;
+}
+.user-rating {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+}
+.reviewers-name {
+  font-size: 1.25;
+  font-weight: 700;
+  color: #fff;
+}
+.review-date {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #c4c4c4;
+}
+.review-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+}
+.buzz-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.buzz-video {
+  width: 20rem;
+  height: 26rem;
+  border-radius: 1rem;
+  flex: 1 1 auto;
+}
+.buzz-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.buzz-owner {
+  color: #fff;
+  font-size: 1.125;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.buzz-type p {
+  display: inline;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b6b6b;
+  padding: 0.5rem 1rem;
+  border-radius: 31rem;
+  background-color: var(--dark75);
+}
+.mobile-menu {
+  display: none;
+  position: relative;
+}
+@media (max-width: 600px) {
+  body{
+    margin: 0 .5rem;
+  }
+  .desktop-img h1 {
+    max-width: 25rem;
+    font-size: 2rem;
+    padding: 12.5% 0 12.5% 2rem;
+  }
+  .user-info{
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .mobile-user-info ul li{
+    color: #fff;
+    display: block;
+  }
+  .search-content {
+    display: none;
+  }
+   .mobile-search-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c2c2c;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1.5rem;
+    position: relative;
+
+  }
+  .search-input {
+    width: 15rem;
+  }
+  .header-button {
+    display: none;
+  }
+ .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: none;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: var(--plain-dark);
+    padding-bottom: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: 0.5s;
+  }
+  .mobile-menu.active{
+    display: flex;
+  }
+  .mobile-menu ul li{
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .mobile-menu ul li:hover{
+    color: var(--dark25);
+  }
+  .sign-up-btn,
+  .sign-in-btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .close-form {
+    display: block;
+  }
+  .upper-content {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .upper-content-img,
+  .upper-content-text {
+    width: 100%;
+  }
+  .celebrity-img {
+    width: 10rem;
+    height: 15rem;
+  }
+  footer {
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    align-items: start;
+    margin: 0 -.5rem;
+  }
+  .subscribe,
+  .links,
+  .celebrity-sign-up,
+  .social-icons {
+    flex: 0 0 0;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  .subscribe input {
+    width: 100%;
+  }
+  .subscribe button {
+    width: 100%;
+    margin: 0;
+  }
+  .social-icons {
+    font-size: 2rem;
+  }
+  .celebrity-sign-up button{
+    width: 100%;
+  }
+  .copyright{
+    text-align: center;
+  }
+  .celebrity-profile{
+    width: 100%;
+    margin: 1rem;
+  }
+  .profile-picture{
+    width: 10rem;
+    height: 10rem;
+  }
+  .profile-info p{
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  body{
+    margin: 0 .5rem;
+  }
+  .user-info{
+    display: none;
+  }
+  .mobile-menu ul li{
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .mobile-menu ul li:hover{
+    color: var(--dark25);
+  }
+  .desktop-img h1 {
+    max-width: 30rem;
+    font-size: 2.5rem;
+    padding: 12.5% 0 12.5% 3rem;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .mobile-menu ul{
+    display: block;
+    color: #fff;
+    background-color: red;
+  }
+  .search-content {
+    display: none;
+  }
+  .mobile-search-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c2c2c;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1.5rem;
+    position: relative;
+  }
+  .search-input {
+    width: 15rem;
+  }
+  .header-button {
+    display: none;
+  }
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 35rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--plain-dark);
+  }
+  .sign-up-btn,
+  .sign-in-btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .close-form {
+    display: block;
+  }
+  .upper-content {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .upper-content-img,
+  .upper-content-text {
+    width: 100%;
+  }
+  .celebrity-img {
+    width: 10rem;
+    height: 15rem;
+  }
+  footer {
+    padding: 2rem 1rem 0 1rem;
+    flex-direction: column;
+    align-items: start;
+    margin: 0 -.5rem;
+  }
+  .subscribe,
+  .links,
+  .celebrity-sign-up,
+  .social-icons {
+    flex: 0 0 0;
+    padding: 1rem 2rem;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .subscribe input {
+    width: 100%;
+  }
+  .subscribe button {
+    width: 100%;
+    margin: 0;
+  }
+  .social-icons {
+    font-size: 2rem;
+  }
+  .celebrity-sign-up button{
+    width: 100%;
+  }
+  .copyright{
+    text-align: center;
+  }
+  .celebrity-profile{
+    width: 100%;
+    margin: 1rem;
+  }
+  .profile-info p{
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1000px){
+  body{
+    margin: 0 1rem;
+  }
+  .desktop-img h1 {
+    max-width: 35rem;
+    font-size: 3rem;
+    padding: 12.5% 0 12.5% 3rem;
+  }
+  .search-input{
+    width: 15rem;
+  }
+  .search-content{
+    width: 28rem;
+  }
+  .sign-up-btn,
+.sign-in-btn {
+  width: 7.5rem;
+}
+}
+@media screen and (min-width: 1001px) and (max-width: 1100px){
+  body{
+    margin: 0 1rem;
+  }
+  .search-input{
+    width: 20rem;
+  }
+  .search-content{
+    width: 33rem;
+  }
+  .sign-up-btn,
+.sign-in-btn {
+  width: 8rem;
+}
+}
+@media screen and (min-width: 1101px) and (max-width: 1300px){
+  body{
+    margin: 0 1rem;
+  }
+  .search-input{
+    width: 25rem;
+  }
+  .search-content{
+    width: 38rem;
+  }
+  .sign-up-btn,
+.sign-in-btn {
+  width: 8rem;
+}
+}
+
+
+
+
+
+
+/* .reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .5s ease;
+    transition-property: transform, opacity;
+}
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+} */

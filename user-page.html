@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUZZ IT</title>
+    <script
+      src="https://kit.fontawesome.com/9527331f85.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="./Assets/Images/favicon-logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <img src="./Assets/Images/Main-Logo-color 1.svg" alt="" />
+      </div>
+      <div class="search-content">
+        <button type="submit" class="search-button">
+          <i class="bx bx-search" style="color: #8c8c8c"></i>
+        </button>
+        <input class="search-input" type="text" placeholder="Search..." />
+        <div class="category">
+          <p>
+            All categories
+            <i class="bx bx-chevron-down" style="color: #c4c4c4"></i>
+          </p>
+        </div>
+        <div class="search-result">
+          <h4 class="search-tittle">Recommended</h4>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Olamide', './Assets/Images/Artists/badoo -dp.JPG', 'Artist')"
+          >
+            <div class="s-celebrity-dp">
+              <img src="./Assets/Images/Artists/badoo -dp.JPG" alt="" />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Olamide</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Lasisi Elenu', './Assets/Images/Comedian-influencer/Lasisi.jpeg', 'content creator')"
+          >
+            <div class="s-celebrity-dp">
+              <img
+                src="./Assets/Images/Comedian-influencer/Lasisi.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Lasisi Elenu</h3>
+              <p>content creator</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Ayra Star', './Assets/Images/Artists/Ayra-dp.JPG', 'Artist')"
+          >
+            <div class="s-celebrity-dp">
+              <img src="./Assets/Images/Artists/Ayra-dp.JPG" alt="" />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Ayra Star</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Buju Bnxn', './Assets/Images/Artists/buju-dp.JPG', 'Artist')"
+          >
+            <div class="s-celebrity-dp">
+              <img src="./Assets/Images/Artists/buju-dp.JPG" alt="" />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Buju Bnxn</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Ademola Lookman', './Assets/Images/Athletes/Ademola-lookman-dp.JPG', 'Athlete')"
+          >
+            <div class="s-celebrity-dp">
+              <img
+                src="./Assets/Images/Athletes/Ademola-lookman-dp.JPG"
+                alt=""
+              />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Ademola Lookman</h3>
+              <p>Athlete</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Taooma', './Assets/Images/Comedian-influencer/Taooma.jpeg', 'Content creator')"
+          >
+            <div class="s-celebrity-dp">
+              <img
+                src="./Assets/Images/Comedian-influencer/Taooma.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Taooma</h3>
+              <p>Content creator</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('KiKi', './Assets/Images/Comedian-influencer/kiki.JPG', 'Content creator')"
+          >
+            <div class="s-celebrity-dp">
+              <img src="./Assets/Images/Comedian-influencer/kiki.JPG" alt="" />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">KIki</h3>
+              <p>Content creator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user-info">
+        <div class="user-details">
+          <i class="bx bxs-bell" style="color: #ffffff"></i>
+          <div class="user-img">
+            <img src="./Assets/Images/profile-img.jpeg" alt="" />
+          </div>
+          <i class="bx bxs-chevron-down" style="color: #ffffff"></i>
+        </div>
+      </div>
+      <div class="menu-icon" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="mobile-menu">
+        <div class="mobile-search-content">
+          <button type="submit" class="search-button">
+            <i class="bx bx-search" style="color: #8c8c8c"></i>
+          </button>
+          <input class="search-input" type="text" placeholder="Search..." />
+          <div class="category">
+            <p>
+              All categories
+              <i class="bx bx-chevron-down" style="color: #c4c4c4"></i>
+            </p>
+          </div>
+          <div class="search-result">
+            <h4 class="search-tittle">Recommended</h4>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Olamide', './Assets/Images/Artists/badoo -dp.JPG', 'Artist')"
+            >
+              <div class="s-celebrity-dp">
+                <img src="./Assets/Images/Artists/badoo -dp.JPG" alt="" />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Olamide</h3>
+                <p>Artist</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Lasisi Elenu', './Assets/Images/Comedian-influencer/Lasisi.jpeg', 'content creator')"
+            >
+              <div class="s-celebrity-dp">
+                <img
+                  src="./Assets/Images/Comedian-influencer/Lasisi.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Lasisi Elenu</h3>
+                <p>content creator</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Ayra Star', './Assets/Images/Artists/Ayra-dp.JPG', 'Artist')"
+            >
+              <div class="s-celebrity-dp">
+                <img src="./Assets/Images/Artists/Ayra-dp.JPG" alt="" />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Ayra Star</h3>
+                <p>Artist</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Buju Bnxn', './Assets/Images/Artists/buju-dp.JPG', 'Artist')"
+            >
+              <div class="s-celebrity-dp">
+                <img src="./Assets/Images/Artists/buju-dp.JPG" alt="" />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Buju Bnxn</h3>
+                <p>Artist</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Ademola Lookman', './Assets/Images/Athletes/Ademola-lookman-dp.JPG', 'Athlete')"
+            >
+              <div class="s-celebrity-dp">
+                <img
+                  src="./Assets/Images/Athletes/Ademola-lookman-dp.JPG"
+                  alt=""
+                />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Ademola Lookman</h3>
+                <p>Athlete</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Taooma', './Assets/Images/Comedian-influencer/Taooma.jpeg', 'Content creator')"
+            >
+              <div class="s-celebrity-dp">
+                <img
+                  src="./Assets/Images/Comedian-influencer/Taooma.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Taooma</h3>
+                <p>Content creator</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('KiKi', './Assets/Images/Comedian-influencer/kiki.JPG', 'Content creator')"
+            >
+              <div class="s-celebrity-dp">
+                <img src="./Assets/Images/Comedian-influencer/kiki.JPG" alt="" />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">KIki</h3>
+                <p>Content creator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul>
+          <li>My Profile</li>
+          <li>My Requests</li>
+          <li>Tell a friend</li>
+          <li><a href="./index.html">Sign out</a></li>
+        </ul>
+      </div>
+      
+    </header>
+    <div class="hero-area">
+      <div class="desktop-img">
+        <h1>Create Personalized Videos featuring your favorite celebrity</h1>
+      </div>
+    </div>
+    <div class="selection-tab">
+      <ul>
+        <li class="">featured</li>
+        <li class="">actors</li>
+        <li class="">comedians</li>
+        <li class="">athletes</li>
+        <li class="">creators</li>
+        <li class="">musicians</li>
+        <li class="">All categories</li>
+      </ul>
+    </div>
+
+    <div class="featured">
+      <div id="featured">
+        <h2>Featured</h2>
+        <button class="">
+          View all <i class="bx bx-chevron-right" style="color: #9428f9"></i>
+        </button>
+      </div>
+      <div class="featured-content">
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Burna Boy', './Assets/Images/Artists/odogwu-dp.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img
+              class="celeb-img"
+              src="./Assets/Images/Artists/odogwu.JPG"
+              alt=""
+            />
+          </div>
+          <div class="celebrity-id">
+            <h3>Burna Boy</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Victor Osimhen', './Assets/Images/Athletes/Osimehn-dp.JPG', 'Athlete')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Athletes/osimehn.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Victor Osimhen</h3>
+            <p>Athlete</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Layi wasabi', './Assets/Images/Comedian-influencer/Layi-wasabi-good.jpeg', 'Content creator')"
+        >
+          <div class="celebrity-img">
+            <img
+              src="./Assets/Images/Comedian-influencer/Layi-wasabi-good.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="celebrity-id">
+            <h3>Layi wasabi</h3>
+            <p>Content creator</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Olamide', './Assets/Images/Artists/badoo -dp.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/badoo.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Olamide</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Asisat Oshoala', './Assets/Images/Athletes/AsisatOshoala.JPG', 'Athlete')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Athletes/AsisatOshoala.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Asisat Oshoala</h3>
+            <p>Athlete</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Tems', './Assets/Images/Artists/tems-dp.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/tems.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Tems</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Asake', './Assets/Images/Artists/asake.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/asake-dp.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Asake</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Taooma', './Assets/Images/Comedian-influencer/Taooma.jpeg', 'Content creator')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Comedian-influencer/Taooma.jpeg" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Taooma</h3>
+            <p>Content creator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="categories">
+      <div id="categories">
+        <h2>Categories</h2>
+        <button>
+          View all <i class="bx bx-chevron-right" style="color: #9428f9"></i>
+        </button>
+      </div>
+
+      <div class="categories-content">
+        <div class="categories">
+          <div class="categories-img">
+            <img src="./Assets/Images/Nff-wide.JPG" alt="" />
+          </div>
+          <div class="categories-id">
+            <h3>Football</h3>
+          </div>
+        </div>
+        <div class="categories">
+          <div class="categories-img">
+            <img src="./Assets/Images/she.JPG" alt="" />
+          </div>
+          <div class="categories-id">
+            <h3>Nollywood</h3>
+          </div>
+        </div>
+        <div class="categories">
+          <div class="categories-img">
+            <img src="./Assets/Images/bbn.JPG" alt="" />
+          </div>
+          <div class="categories-id">
+            <h3>Big Brother Naija</h3>
+          </div>
+        </div>
+        <div class="categories">
+          <div class="categories-img">
+            <img src="./Assets/Images/Athletes/osimehn-4-wide.JPG" alt="" />
+          </div>
+          <div class="categories-id">
+            <h3>Athletes</h3>
+          </div>
+        </div>
+        <div class="categories">
+          <div class="categories-img">
+            <img src="./Assets/Images/Nff-wide.JPG" alt="" />
+          </div>
+          <div class="categories-id">
+            <h3>Football</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content">
+      <div class="upper-content">
+        <div class="upper-content-img">
+          <img src="./Assets/Images/anikulapo.jpeg" alt="" />
+        </div>
+        <div class="upper-content-text">
+          <h5>2 hours ago - <span class="italic">by Zarmani</span></h5>
+          <h3>Anikulapo: A one of a kind mystical folklore drama</h3>
+          <p>
+            Aníkúlápó narrates the story of Saro (played by Kunle Remi) who has
+            recently arrived in Oyo as a stranger and a traditional textile
+            weaver who uses the "aso-ofi" loom and technique. Saro has an
+            illicit romance with Queen Arolake (played by Bimbo Ademoye) who has
+            an unhappy marriage because she is hated by the King's wives and is
+            also uninterested in the king, but it is her duty to lay with him.
+            She is also young and uninterested in the older king's constant
+            attention.
+            <!-- His favoritism brings up rivalries with the other, older
+              queens, who mistreat her. She and Saro fall in love. As they make
+              plans to elope, word of their affair gets to the king, who sentences
+              Saro to death. Based on the mythical Akala bird which wakes him from
+              death, Saro, through the astute actions of Arolake, gains the power
+              to resurrect the dead through a gourd stolen by Aroloke, and earns
+              the name, Anikulapo (Aníkúlápó), which means the "one that holds
+              death in his purse." As Saro becomes popular in their new village
+              Ojumo, he sets amorous eyes on other women and betrays Arolake. His
+              excessive pride is his hubris as he begins to make inordinate
+              demands from the villagers before he can raise the dead. When
+              Arolake hears that Saro has asked for the king's daughter before he
+              can restore life to the king's heir, she undermines the source of
+              his power and deserts him. Saro fails to resurrect the prince and
+              discovers he no longer has the power to tame death. -->
+          </p>
+          <button>
+            Read full article
+            <i class="bx bxs-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="lower-content">
+        <div class="lower-contents">
+          <div class="lower-contents-img">
+            <img src="./Assets/Images/Athletes/osimehn-4-wide.JPG" alt="" />
+          </div>
+          <div class="lower-contents-id">
+            <h5>2 hours ago - <span class="italic">by Zarmani</span></h5>
+            <p>
+              Interview: Bella shmurda's rise to fame is what dreams are made of
+            </p>
+          </div>
+        </div>
+        <div class="lower-contents">
+          <div class="lower-contents-img">
+            <img src="./Assets/Images/Athletes/osimehn-4-wide.JPG" alt="" />
+          </div>
+          <div class="lower-contents-id">
+            <h5>2 hours ago - <span class="italic">by Zarmani</span></h5>
+            <p>
+              Interview: Bella shmurda's rise to fame is what dreams are made of
+            </p>
+          </div>
+        </div>
+        <div class="lower-contents">
+          <div class="lower-contents-img">
+            <img src="./Assets/Images/Athletes/osimehn-4-wide.JPG" alt="" />
+          </div>
+          <div class="lower-contents-id">
+            <h5>2 hours ago - <span class="italic">by Zarmani</span></h5>
+            <p>
+              Interview: Bella shmurda's rise to fame is what dreams are made of
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="artist">
+      <div id="artist">
+        <h2>Artist</h2>
+        <button class="">
+          View all <i class="bx bx-chevron-right" style="color: #9428f9"></i>
+        </button>
+      </div>
+      <div class="artist-content">
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Burna Boy', './Assets/Images/Artists/odogwu-dp.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/odogwu.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Burna Boy</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Asake', './Assets/Images/Artists/asake.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/asake3.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Asake</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Buju', './Assets/Images/Artists/buju-dp.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/buju.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Buju bnxn</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Olamide', './Assets/Images/Artists/badoo -dp.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/badoo.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Olamide</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Ruger', './Assets/Images/Artists/ruger-dp.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/ruger.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Ruger</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Tems', './Assets/Images/Artists/tems-dp.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/tems.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Tems</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Asake', './Assets/Images/Artists/asake.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/asake-dp.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Asake</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Freboy DML', './Assets/Images/Artists/fireboy.JPG', 'Artist')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Artists/fireboy.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Fireboy DML</h3>
+            <p>Artist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-creator">
+      <div id="content-creator">
+        <h2>Content creators</h2>
+        <button>
+          View all <i class="bx bx-chevron-right" style="color: #9428f9"></i>
+        </button>
+      </div>
+      <div class="content-creator-content">
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Brain Jotter', './Assets/Images/Comedian-influencer/brainjotter-dp.JPG', 'Content creator')"
+        >
+          <div class="celebrity-img">
+            <img
+              src="./Assets/Images/Comedian-influencer/brainjotter.JPG"
+              alt=""
+            />
+          </div>
+          <div class="celebrity-id">
+            <h3>Brain Jotter</h3>
+            <p>Content creator</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Craze Clown', './Assets/Images/Comedian-influencer/Carze-clown.jpeg', 'Content creator')"
+        >
+          <div class="celebrity-img">
+            <img
+              src="./Assets/Images/Comedian-influencer/Carze-clown.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="celebrity-id">
+            <h3>Craze Clown</h3>
+            <p>Content creator</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Sabinus', './Assets/Images/Comedian-influencer/sabinus-dp.JPG', 'Content creator')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Comedian-influencer/sabinus.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Sabinus</h3>
+            <p>Content creator</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('KiKi', './Assets/Images/Comedian-influencer/kiki.JPG', 'Content creator')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Comedian-influencer/kiki.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Olamide</h3>
+            <p>Content creator</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Layi wasabi', './Assets/Images/Comedian-influencer/Layi-wasabi-good.jpeg', 'Content creator')"
+        >
+          <div class="celebrity-img">
+            <img
+              src="./Assets/Images/Comedian-influencer/Layi-wasabi-good.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="celebrity-id">
+            <h3>Layi wasabi</h3>
+            <p>Content creator</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Mc Remote', './Assets/Images/Comedian-influencer/mc-remote-dp.jpeg', 'Content creator')"
+        >
+          <div class="celebrity-img">
+            <img
+              src="./Assets/Images/Comedian-influencer/mc-remote.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="celebrity-id">
+            <h3>Mc Remote</h3>
+            <p>Content creator</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Officer Woos', './Assets/Images/Comedian-influencer/officer-woos-dp.jpeg', 'Content creator')"
+        >
+          <div class="celebrity-img">
+            <img
+              src="./Assets/Images/Comedian-influencer/officer-woos.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="celebrity-id">
+            <h3>Officer Woos</h3>
+            <p>Content creator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="athletes">
+      <div id="athletes">
+        <h2>Athletes</h2>
+        <button>
+          View all <i class="bx bx-chevron-right" style="color: #9428f9"></i>
+        </button>
+      </div>
+      <div class="athletes-content">
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Victor Osimhen', './Assets/Images/Athletes/Osimehn-dp.JPG', 'Athlete')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Athletes/osimehn.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Victor Osimhen</h3>
+            <p>Athlete</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Asisat Oshoala', './Assets/Images/Athletes/AsisatOshoala.JPG', 'Athlete')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Athletes/AsisatOshoala.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Asisat Oshoala</h3>
+            <p>Athlete</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Ademola Lookman', './Assets/Images/Athletes/Ademola-lookman-dp.JPG', 'Athlete')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Athletes/ademola-lookman-.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Ademola Lookman</h3>
+            <p>Athletes</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Alex Iwobi', './Assets/Images/Athletes/alex-iwobi-dp.PNG', 'Athlete')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Athletes/Alex-iwobi.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Alex Iwobi</h3>
+            <p>Athletes</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Stanley Nwabali', './Assets/Images/Athletes/nwabali-dp.JPG', 'Athlete')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Athletes/nwabali.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Stanley Nwabali</h3>
+            <p>Athletes</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Calvin Bassey', './Assets/Images/Athletes/calvin-bassey.JPG', 'Athlete')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Athletes/calvin-bassey.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Calvin Bassey</h3>
+            <p>Athletes</p>
+          </div>
+        </div>
+        <div
+          class="celebrity"
+          onclick="redirectToProfile('Samuel Chukwueze', './Assets/Images/Athletes/samuel-chukwueze.JPG', 'Athlete')"
+        >
+          <div class="celebrity-img">
+            <img src="./Assets/Images/Athletes/samuel-chukwueze.JPG" alt="" />
+          </div>
+          <div class="celebrity-id">
+            <h3>Samuel Chukwueze</h3>
+            <p>Athletes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="discover-btn">DISCOVER MORE</button>
+
+    <footer>
+      <div class="subscribe">
+        <h4>Subscribe to our newsletter</h4>
+        <p>
+          Get Latest updates on the newest celebrities and best deals on BUZZ IT
+        </p>
+        <input
+          type="email"
+          placeholder="Enter Email Address"
+          class="mail-input"
+        />
+        <button type="submit">SUBSCRIBE</button>
+        <div class="social-icons">
+          <i class="bx bxl-instagram-alt" style="color: #9428f9"></i>
+          <i class="bx bxl-facebook-circle" style="color: #9428f9"></i>
+          <i class="bx bxl-twitter" style="color: #9428f9"></i>
+          <i class="bx bxl-linkedin-square" style="color: #9428f9"></i>
+          <i class="bx bxl-youtube" style="color: #9428f9"></i>
+        </div>
+      </div>
+      <div class="links">
+        <ul>
+          <li>FAQ</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li>Blogs</li>
+          <li>Press</li>
+          <li>Help</li>
+          <li>For Business</li>
+        </ul>
+      </div>
+      <div class="celebrity-sign-up">
+        <p>Sign up as a Celebrity</p>
+        <button>Become A CELEBRITY</button>
+        <p class="copyright">&copy; 2017-2021, BUZZ IT. All Right Reserved.</p>
+      </div>
+    </footer>
+
+    <script defer src="./index.js"></script>
+  </body>
+</html>
