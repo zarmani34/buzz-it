@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUZZ IT</title>
+    <script
+      src="https://kit.fontawesome.com/9527331f85.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="./Assets/Images/favicon-logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <a href="./user-page.html"><img src="./Assets/Images/Main-Logo-color 1.svg" alt="" /></a>
+      </div>
+      <div class="search-content">
+        <button type="submit" class="search-button">
+          <i class="bx bx-search" style="color: #8c8c8c"></i>
+        </button>
+        <input class="search-input" type="text" placeholder="Search..." />
+        <div class="category">
+          <p>
+            All categories
+            <i class="bx bx-chevron-down" style="color: #c4c4c4"></i>
+          </p>
+        </div>
+        <div class="search-result">
+          <h4 class="search-tittle">Recommended</h4>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Olamide', './Assets/Images/Artists/badoo -dp.JPG', 'Artist')"
+          >
+            <div class="s-celebrity-dp">
+              <img src="./Assets/Images/Artists/badoo -dp.JPG" alt="" />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Olamide</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Lasisi Elenu', './Assets/Images/Comedian-influencer/Lasisi.jpeg', 'content creator')"
+          >
+            <div class="s-celebrity-dp">
+              <img
+                src="./Assets/Images/Comedian-influencer/Lasisi.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Lasisi Elenu</h3>
+              <p>content creator</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Ayra Star', './Assets/Images/Artists/Ayra-dp.JPG', 'Artist')"
+          >
+            <div class="s-celebrity-dp">
+              <img src="./Assets/Images/Artists/Ayra-dp.JPG" alt="" />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Ayra Star</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Buju Bnxn', './Assets/Images/Artists/buju-dp.JPG', 'Artist')"
+          >
+            <div class="s-celebrity-dp">
+              <img src="./Assets/Images/Artists/buju-dp.JPG" alt="" />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Buju Bnxn</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Ademola Lookman', './Assets/Images/Athletes/Ademola-lookman-dp.JPG', 'Athlete')"
+          >
+            <div class="s-celebrity-dp">
+              <img
+                src="./Assets/Images/Athletes/Ademola-lookman-dp.JPG"
+                alt=""
+              />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Ademola Lookman</h3>
+              <p>Athlete</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('Taooma', './Assets/Images/Comedian-influencer/Taooma.jpeg', 'Content creator')"
+          >
+            <div class="s-celebrity-dp">
+              <img
+                src="./Assets/Images/Comedian-influencer/Taooma.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">Taooma</h3>
+              <p>Content creator</p>
+            </div>
+          </div>
+          <div
+            class="recommended"
+            onclick="redirectToProfile('KiKi', './Assets/Images/Comedian-influencer/kiki.JPG', 'Content creator')"
+          >
+            <div class="s-celebrity-dp">
+              <img src="./Assets/Images/Comedian-influencer/kiki.JPG" alt="" />
+            </div>
+            <div class="celebrity-search-id">
+              <h3 class="celebrity-name">KIki</h3>
+              <p>Content creator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user-info">
+        <div class="user-details">
+          <i class="bx bxs-bell" style="color: #ffffff"></i>
+          <div class="user-img">
+            <img src="./Assets/Images/profile-img.jpeg" alt="" />
+          </div>
+          <i class="bx bxs-chevron-down" style="color: #ffffff"></i>
+        </div>
+      </div>
+      <div class="menu-icon" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="mobile-menu">
+        <div class="mobile-search-content">
+          <button type="submit" class="search-button">
+            <i class="bx bx-search" style="color: #8c8c8c"></i>
+          </button>
+          <input class="search-input search-input-mobile" type="text" placeholder="Search..." />
+          <div class="category">
+            <p>
+              All categories
+              <i class="bx bx-chevron-down" style="color: #c4c4c4"></i>
+            </p>
+          </div>
+          <div class="mobile-search-result">
+            <h4 class="search-tittle">Recommended</h4>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Olamide', './Assets/Images/Artists/badoo -dp.JPG', 'Artist')"
+            >
+              <div class="s-celebrity-dp">
+                <img src="./Assets/Images/Artists/badoo -dp.JPG" alt="" />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Olamide</h3>
+                <p>Artist</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Lasisi Elenu', './Assets/Images/Comedian-influencer/Lasisi.jpeg', 'content creator')"
+            >
+              <div class="s-celebrity-dp">
+                <img
+                  src="./Assets/Images/Comedian-influencer/Lasisi.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Lasisi Elenu</h3>
+                <p>content creator</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Ayra Star', './Assets/Images/Artists/Ayra-dp.JPG', 'Artist')"
+            >
+              <div class="s-celebrity-dp">
+                <img src="./Assets/Images/Artists/Ayra-dp.JPG" alt="" />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Ayra Star</h3>
+                <p>Artist</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Buju Bnxn', './Assets/Images/Artists/buju-dp.JPG', 'Artist')"
+            >
+              <div class="s-celebrity-dp">
+                <img src="./Assets/Images/Artists/buju-dp.JPG" alt="" />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Buju Bnxn</h3>
+                <p>Artist</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Ademola Lookman', './Assets/Images/Athletes/Ademola-lookman-dp.JPG', 'Athlete')"
+            >
+              <div class="s-celebrity-dp">
+                <img
+                  src="./Assets/Images/Athletes/Ademola-lookman-dp.JPG"
+                  alt=""
+                />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Ademola Lookman</h3>
+                <p>Athlete</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('Taooma', './Assets/Images/Comedian-influencer/Taooma.jpeg', 'Content creator')"
+            >
+              <div class="s-celebrity-dp">
+                <img
+                  src="./Assets/Images/Comedian-influencer/Taooma.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">Taooma</h3>
+                <p>Content creator</p>
+              </div>
+            </div>
+            <div
+              class="recommended"
+              onclick="redirectToProfile('KiKi', './Assets/Images/Comedian-influencer/kiki.JPG', 'Content creator')"
+            >
+              <div class="s-celebrity-dp">
+                <img
+                  src="./Assets/Images/Comedian-influencer/kiki.JPG"
+                  alt=""
+                />
+              </div>
+              <div class="celebrity-search-id">
+                <h3 class="celebrity-name">KIki</h3>
+                <p>Content creator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul>
+          <li>My Profile</li>
+          <li>My Requests</li>
+          <li>Tell a friend</li>
+          <li><a href="./index.html">Sign out</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="celebrity-profile">
+      <div class="profile-container">
+        <div class="profile-picture" id="profile-picture"></div>
+        <div class="profile-info">
+          <h2 class="celebrity-name" id="username"></h2>
+          <p class="celebrity-tag" id="celebrity-tag"></p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            libero eaque dolor distinctio error, architecto vero!
+          </p>
+        </div>
+      </div>
+      <div class="edit-btn"><button>Edit profile</button></div>
+      <div class="reviews">
+        <h2>Reviews</h2>
+        <button>
+          view all
+          <i class="bx bxs-chevron-right"></i>
+        </button>
+      </div>
+      <div class="profile-reviews">
+        <div class="profile-review">
+          <div class="user-rating">
+            <i class="bx bxs-star" style="color: #ffb800"></i>5.0
+          </div>
+          <div class="reviewers-name">Mu****</div>
+          <div class="review-date"><p>Jan 3rd. 2021</p></div>
+          <div class="review-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+              ea esse reiciendis, voluptatibus magni autem incidunt quia eaque
+              eius libero.
+            </p>
+          </div>
+        </div>
+        <div class="profile-review">
+          <div class="user-rating">
+            <i class="bx bxs-star" style="color: #ffb800"></i>5.0
+          </div>
+          <div class="reviewers-name">Mu****</div>
+          <div class="review-date"><p>Jan 3rd. 2021</p></div>
+          <div class="review-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+              ea esse reiciendis, voluptatibus magni autem incidunt quia eaque
+              eius libero.
+            </p>
+          </div>
+        </div>
+        <div class="profile-review">
+          <div class="user-rating">
+            <i class="bx bxs-star" style="color: #ffb800"></i>5.0
+          </div>
+          <div class="reviewers-name">Sa****</div>
+          <div class="review-date"><p>Jan 3rd. 2021</p></div>
+          <div class="review-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+              ea esse reiciendis, voluptatibus magni autem incidunt quia eaque
+              eius libero.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="buzzes">
+        <h2>Buzzes</h2>
+        <div class="buzz-wrap">
+          <div class="buzz">
+            <div class="buzz-video">
+              <video
+                src="./Assets/videos/WjvRuud-Y-469U29.mp4"
+                controls
+              ></video>
+            </div>
+            <div class="buzz-owner"><p>To the world</p></div>
+            <div class="buzz-type">
+              <p>#control-performance</p>
+            </div>
+          </div>
+          <div class="buzz">
+            <div class="buzz-video">
+              <video
+                src="./Assets/videos/qbMdKFIIF-hfpItk.mp4"
+                controls
+              ></video>
+            </div>
+            <div class="buzz-owner"><p>To Ajala</p></div>
+            <div class="buzz-type">
+              <p>#birthday</p>
+            </div>
+          </div>
+          <div class="buzz">
+            <div class="buzz-video">
+              <video
+                src="./Assets/videos/cdAuMiamm9kKpfQl.mp4"
+                controls
+              ></video>
+            </div>
+            <div class="buzz-owner"><p>To Mr. Peter</p></div>
+            <div class="buzz-type">
+              <p>#birthday</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="overlay-footer">
+      <div class="subscribe">
+        <h4>Subscribe to our newsletter</h4>
+        <p>
+          Get Latest updates on the newest celebrities and best deals on BUZZ IT
+        </p>
+        <input
+          type="email"
+          placeholder="Enter Email Address"
+          class="mail-input"
+        />
+        <button type="submit">SUBSCRIBE</button>
+        <div class="social-icons">
+          <i class="bx bxl-instagram-alt" style="color: #9428f9"></i>
+          <i class="bx bxl-facebook-circle" style="color: #9428f9"></i>
+          <i class="bx bxl-twitter" style="color: #9428f9"></i>
+          <i class="bx bxl-linkedin-square" style="color: #9428f9"></i>
+          <i class="bx bxl-youtube" style="color: #9428f9"></i>
+        </div>
+      </div>
+      <div class="links">
+        <ul>
+          <li>FAQ</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li>Blogs</li>
+          <li>Press</li>
+          <li>Help</li>
+          <li>For Business</li>
+        </ul>
+      </div>
+      <div class="celebrity-sign-up">
+        <p>Sign up as a Celebrity</p>
+        <button>Become A CELEBRITY</button>
+        <p class="copyright">&copy; 2017-2021, BUZZ IT. All Right Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+    <script src="./celebrity_profile_page.js"></script>
+  </body>
+</html>
