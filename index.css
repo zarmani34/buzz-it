@@ -467,7 +467,7 @@ footer {
   line-height: 2;
 }
 .subscribe p {
-  width: 21.5rem;
+  width: 100%;
   color: #c4c4c4;
   font-size: 1rem;
   font-weight: 700;
@@ -562,8 +562,8 @@ footer {
 .logo-overlay {
   margin: 1rem auto;
 }
-.account-request {
-  display: none;
+/* .account-request {
+  display: block;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -571,17 +571,41 @@ footer {
   left: 0;
   background-color: var(--plain-dark);
   overflow-y: auto;
-}
-.sign-up,
-.sign-in {
+} */
+.sign-up-content,
+.sign-in-content {
   color: #fff;
   border-radius: 1.5rem;
   background-color: var(--dark75);
   opacity: 1;
+  width: 60%;
+  padding: 4rem;
+  /* margin: 0 auto; */
+  display: block;
+}
+.sign-in-content {
   width: 50%;
-  padding: 4rem 4rem 4rem 4rem;
-  margin: 0 auto;
-  display: none;
+}
+.sign-up,
+.sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-up-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check-input {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin-bottom: 0;
+}
+.check-label {
+  margin-left: 1rem;
+  margin-bottom: 0;
 }
 .sign-in-content #p1 {
   margin-bottom: 2rem;
@@ -676,7 +700,7 @@ form input:focus {
   color: var(--dark25);
   cursor: pointer;
 }
-.check-input {
+/* .check-input {
   width: 3%;
   cursor: pointer;
 }
@@ -684,7 +708,7 @@ form input:focus {
   display: inline;
   font-size: 1rem;
   margin-left: 0.5rem;
-}
+} */
 .sign-up-submit,
 .sign-in-submit {
   width: 100%;
@@ -695,6 +719,7 @@ form input:focus {
   color: #fff;
   text-transform: uppercase;
   padding: 1rem 0;
+  margin-top: 1rem;
   margin-bottom: 4rem;
   border-radius: 31rem;
   background-color: var(--main-color);
@@ -734,7 +759,12 @@ form input:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .login-request {
-  width: 37rem;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 37rem; */
   padding: 4rem;
   margin: 6.25rem auto;
   border-radius: 1.5rem;
@@ -750,23 +780,21 @@ form input:focus {
   margin-bottom: 1rem;
   width: 100%;
 }
-.close-form {
-  display: none;
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+.check-box{
+  display: flex;
+  align-items: center;
 }
 .account-request.close {
   display: none;
 }
 .check-label {
   display: inline-block;
-  height: 1rem;
+  /* height: 1rem; */
 }
-.check-label input {
+/* .check-label input {
   min-width: 3rem;
   cursor: pointer;
-}
+} */
 .mssg {
   width: 100%;
   font-size: 1rem;
@@ -906,6 +934,10 @@ form input:focus {
   position: relative;
 }
 @media (max-width: 480px) {
+  .user-info,
+  .header-button {
+    display: none;
+  }
   body {
     margin: 0 0.5rem;
   }
@@ -973,19 +1005,6 @@ form input:focus {
   .buzzes h2 {
     font-size: 1.5rem;
   }
-  .confirm-password {
-    margin: 0;
-    padding: 0;
-  }
-  .search-content {
-    display: none;
-  }
-  .user-info {
-    display: none;
-  }
-  .header-button {
-    display: none;
-  }
   .menu-icon {
     display: block;
   }
@@ -1004,25 +1023,19 @@ form input:focus {
     border-bottom-right-radius: 1rem;
     transition: 0.5s;
   }
-  .mobile-menu.active {
+  .mobile-menu.active,
+  .search-content.active {
     display: flex;
   }
-  .mobile-search-content {
-    display: flex;
+  .search-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
     width: 100%;
-    align-items: center;
-    /* justify-content: space-between; */
-    background-color: #2c2c2c;
-    padding: 0.5rem 0.5rem;
-    border-radius: 1.5rem;
-    position: relative;
   }
-  .mobile-search {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-  .mobile-search-content .search-input {
+  .search-input {
     width: 50%;
   }
   .search-button {
@@ -1032,9 +1045,14 @@ form input:focus {
     width: 50%;
     font-size: 1rem;
   }
-  .mobile-search-result {
+  .search-result {
     padding: 0.5rem;
     height: 20rem;
+    z-index: 2;
+  }
+  .mobile-menu ul {
+    margin-top: 4rem;
+    padding: 0.5rem;
   }
   .mobile-menu ul li {
     display: block;
@@ -1050,19 +1068,16 @@ form input:focus {
   }
   .mobile-header-button {
     position: absolute;
-    bottom: 5rem;
+    bottom: 3rem;
     left: 0;
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .sign-up-btn,
   .sign-in-btn {
     display: block;
     width: 100%;
     margin: 0.5rem 0;
-  }
-  .close-form {
-    display: block;
   }
   .upper-content {
     flex-direction: column;
@@ -1082,7 +1097,7 @@ form input:focus {
     width: 100%;
   }
   .profile-container {
-    gap: 1rem;
+    gap: 0.5rem;
   }
   .profile-picture {
     width: 10rem;
@@ -1090,7 +1105,10 @@ form input:focus {
     border: 0.3rem solid #ca90ff;
   }
   .profile-info {
-    width: 20rem;
+    width: 60%;
+  }
+  .profile-info h2 {
+    font-size: 1.5rem;
   }
   .profile-info p {
     font-size: 0.8rem;
@@ -1105,12 +1123,59 @@ form input:focus {
   .login-request {
     width: 90%;
     padding: 2rem;
-    margin: 12.5rem auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  .sign-up,
-  .sign-in {
+
+  #p1 {
+    font-size: 1.5rem;
+  }
+  #p2 {
+    font-size: 0.8rem;
+    width: 80%;
+    margin: 0.5rem auto;
+  }
+  #p5 {
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    padding: 0;
     width: 100%;
+  }
+  form {
+    margin-top: 1rem;
+  }
+  form input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  form label {
+    font-size: 1rem;
+  }
+  .check-label {
+    font-size: 0.7rem;
+    /* display: inline-block; */
+  }
+  .sign-up-content,
+  .sign-in-content {
+    width: 100%;
+    margin: 2rem 0;
     padding: 1rem;
+  }
+  .sign-up-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .check-input {
+    /* display: block; */
+    width: 1rem;
+    height: 1rem;
+  }
+  .sign-up-submit,
+  .sign-in-submit {
+    margin: 1rem 0;
   }
   footer {
     padding: 0.5rem 1rem;
@@ -1135,6 +1200,9 @@ form input:focus {
   .subscribe h4 {
     text-align: center;
   }
+  .subscribe p {
+    text-align: center;
+  }
   .subscribe input {
     width: 100%;
   }
@@ -1154,6 +1222,9 @@ form input:focus {
   }
   .copyright {
     text-align: center;
+  }
+  .overlay-footer {
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 600px) {
@@ -1193,34 +1264,30 @@ form input:focus {
     border-bottom-right-radius: 1rem;
     transition: 0.5s;
   }
-  .mobile-menu.active {
+  .mobile-menu.active,
+  .search-content.active {
     display: flex;
   }
-  .mobile-search-content {
-    display: flex;
+  .search-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: #2c2c2c;
-    padding: 0.5rem 0.5rem;
-    border-radius: 1.5rem;
-    position: relative;
   }
-  .search-button {
-    width: 5%;
-  }
-  .mobile-search-content .search-input {
-    width: 65%;
+  .search-input {
+    width: 50%;
   }
   .search-button {
     width: 5%;
   }
   .category {
-    width: 40%;
+    width: 50%;
     font-size: 1rem;
   }
-  .mobile-search-result {
-    padding: 1rem;
+  .mobile-menu ul {
+    margin-top: 4rem;
   }
   .mobile-menu ul li {
     display: block;
@@ -1269,6 +1336,9 @@ form input:focus {
     min-height: 13em;
     max-height: 13rem;
   }
+  .overlay-footer {
+    margin-top: 1.5rem;
+  }
   footer {
     padding: 0.5rem 1rem;
     flex-direction: column;
@@ -1278,7 +1348,42 @@ form input:focus {
   .login-request {
     width: 80%;
     padding: 2rem;
-    margin: 12.5rem auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .sign-up-content,
+  .sign-in-content {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+  .sign-up-submit,
+  .sign-in-submit {
+    margin: 1rem 0;
+  }
+  .sign-up-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .check-label {
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .check-input {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin-bottom: 0;
+  }
+  #p5 {
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    padding: 0;
+    width: 100%;
   }
   .subscribe,
   .links,
@@ -1354,11 +1459,33 @@ form input:focus {
   .user-info {
     display: none;
   }
-  .search-content {
-    display: none;
-  }
   .menu-icon {
     display: block;
+  }
+  .mobile-menu.active,
+  .search-content.active {
+    display: flex;
+  }
+  .search-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+  }
+  .search-input {
+    width: 65%;
+  }
+  .search-button {
+    width: 5%;
+  }
+  .category {
+    width: 30%;
+    font-size: 1rem;
+  }
+  .mobile-menu ul {
+    margin-top: 4rem;
   }
   .mobile-menu ul li {
     display: block;
@@ -1371,35 +1498,6 @@ form input:focus {
   }
   .mobile-menu ul li:hover {
     color: var(--dark25);
-  }
-  .mobile-search-content .search-input {
-    width: 65%;
-  }
-  .search-button {
-    width: 5%;
-  }
-  .category {
-    width: 40%;
-    font-size: 1rem;
-  }
-  .mobile-search-result {
-    padding: 1rem;
-  }
-  .mobile-search-content {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: #2c2c2c;
-    padding: 0.5rem 0.5rem;
-    border-radius: 1.5rem;
-    position: relative;
-  }
-  .mobile-menu.active {
-    display: flex;
-  }
-  .search-input {
-    width: 15rem;
   }
   .header-button {
     display: none;
@@ -1479,7 +1577,36 @@ form input:focus {
   .login-request {
     width: 80%;
     padding: 4rem;
-    margin: 12.5rem auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .sign-up-content,
+  .sign-in-content {
+    width: 75%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+  .sign-up-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .check-label {
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .check-input {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin-bottom: 0;
+  }
+  .overlay-footer {
+    margin-top: 2rem;
   }
   footer {
     padding: 2rem 1rem 0 1rem;
@@ -1544,6 +1671,10 @@ form input:focus {
   .sign-in-btn {
     width: 7.5rem;
   }
+  .sign-up-content,
+  .sign-in-content {
+    padding: 2rem;
+  }
 }
 @media screen and (min-width: 1001px) and (max-width: 1100px) {
   body {
@@ -1558,6 +1689,10 @@ form input:focus {
   .sign-up-btn,
   .sign-in-btn {
     width: 8rem;
+  }
+  .sign-up-content,
+  .sign-in-content {
+    padding: 2rem;
   }
 }
 @media screen and (min-width: 1101px) and (max-width: 1300px) {
@@ -1575,15 +1710,3 @@ form input:focus {
     width: 8rem;
   }
 }
-
-/* .reveal {
-    position: relative;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: .5s ease;
-    transition-property: transform, opacity;
-}
-.reveal.active {
-    transform: translateY(0px);
-    opacity: 1;
-} */

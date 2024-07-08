@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUZZ IT</title>
+    <script
+      src="https://kit.fontawesome.com/9527331f85.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="./Assets/Images/favicon-logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header class="header-overlay">
+      <div class="header-logo logo-overlay">
+        <img src="./Assets/Images/Main-Logo-color 1.svg" alt="" />
+      </div>
+    </header>
+    <div class="sign-up">
+      <div class="sign-up-content">
+        <p id="p1">
+          Join
+          <span>BUZZ IT</span>
+        </p>
+        <p id="p2">To get personalized video shoutouts for your close ones</p>
+        <div class="facebook-sign-in">
+          <i class="bx bxl-facebook-square"></i>
+          <p id="p3">
+            <a target="_blank" href="https://www.facebook.com/"
+              >Continue with faceboook</a
+            >
+          </p>
+        </div>
+        <hr />
+        <p id="p4">or sign up below</p>
+        <form id="form1" action="">
+          <label for="full-name-input">Full name</label>
+          <input type="text" placeholder="Jane Doe" id="full-name-input" />
+          <p class="error name-mssg"></p>
+
+          <label for="mail-sign-up-input">Email</label>
+          <input
+            type="email"
+            placeholder="Jane@example.com"
+            id="mail-sign-up-input"
+          />
+          <p class="error mail-mssg"></p>
+
+          <label for="birthday-input">Birthday</label>
+          <input
+            type="date"
+            name=""
+            id="birthday-input"
+            placeholder="mm/dd/yyyy"
+          />
+          <p class="error birthday-mssg"></p>
+
+          <div class="password-input1">
+            <label for="password-input1">Password</label>
+            <input
+              type="password"
+              placeholder="Enter password"
+              id="password-input1"
+            />
+            <i class="fa-regular fa-eye eye-icon"></i>
+            <p class="error password-mssg"></p>
+          </div>
+
+          <div class="confirm-password">
+            <label for="confirm-password">Confirm password</label>
+            <input
+              type="password"
+              placeholder="Enter password"
+              id="confirm-password"
+            />
+            <i class="fa-regular fa-eye cp-eye-icon"></i>
+            <p class="error confirm-password-mssg"></p>
+          </div>
+
+          <label for="invite-input">Invite code(optional)</label>
+          <input type="text" placeholder="Enter code" id="invite-input" />
+
+          <div class="sign-up-checkbox">
+            <input type="checkbox" name="" id="check1" class="check-input" />
+            <label for="check1" class="check-label">
+              I'll love to receive latest update on offers and discounts
+            </label>
+          </div>
+
+          <button type="submit" class="sign-up-submit">Submit</button>
+        </form>
+
+        <p id="p5">
+          You are not totally signed up to BUZZ IT yet. If you meet the
+          requirements, our representative will contact you via email with your
+          status and help you onboard.
+        </p>
+
+        <p id="p6">
+          Already have an account? <span class="login-btn">Sign In</span>
+        </p>
+      </div>
+    </div>
+
+    <footer class="overlay-footer">
+      <div class="subscribe">
+        <h4>Subscribe to our newsletter</h4>
+        <p>
+          Get Latest updates on the newest celebrities and best deals on BUZZ IT
+        </p>
+        <input
+          type="email"
+          placeholder="Enter Email Address"
+          class="mail-input"
+        />
+        <button type="submit">SUBSCRIBE</button>
+        <div class="social-icons">
+          <i class="bx bxl-instagram-alt" style="color: #9428f9"></i>
+          <i class="bx bxl-facebook-circle" style="color: #9428f9"></i>
+          <i class="bx bxl-twitter" style="color: #9428f9"></i>
+          <i class="bx bxl-linkedin-square" style="color: #9428f9"></i>
+          <i class="bx bxl-youtube" style="color: #9428f9"></i>
+        </div>
+      </div>
+      <div class="links">
+        <ul>
+          <li>FAQ</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li>Blogs</li>
+          <li>Press</li>
+          <li>Help</li>
+          <li>For Business</li>
+        </ul>
+      </div>
+      <div class="celebrity-sign-up">
+        <p>Sign up as a Celebrity</p>
+        <button>Become A CELEBRITY</button>
+        <p class="copyright">&copy; 2017-2021, BUZZ IT. All Right Reserved.</p>
+      </div>
+    </footer>
+    <script src="sign-up.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

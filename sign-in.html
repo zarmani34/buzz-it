@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUZZ IT</title>
+    <script
+      src="https://kit.fontawesome.com/9527331f85.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="./Assets/Images/favicon-logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="header-overlay">
+      <div class="header-logo logo-overlay">
+        <img src="./Assets/Images/Main-Logo-color 1.svg" alt="" />
+      </div>
+    </div>
+    <div class="sign-in">
+      <div class="sign-in-content">
+        <p id="p1">SIGN IN</p>
+        <div class="facebook-sign-in">
+          <i class="bx bxl-facebook-square"></i>
+          <p id="p3">Continue with faceboook</p>
+        </div>
+        <div class="google-sign-in">
+          <div class="google-img">
+            <img src="./Assets/Images/googl.png" alt="" />
+          </div>
+          <p id="p3">Continue with Google</p>
+        </div>
+        <hr />
+        <p id="p4">or sign up below</p>
+        <form action="" id="form2">
+          <label for="mail-input">Email or username</label>
+          <input type="email" placeholder="you@example.com" id="mail-input" />
+          <p class="error mail2-mssg"></p>
+
+          <div class="password-input2">
+            <label for="password-input2">Password</label>
+            <input
+              type="password"
+              placeholder="Enter password"
+              id="password-input2"
+            />
+            <i class="fa-regular fa-eye signin-eye-icon"></i>
+            <p class="error password2-mssg"></p>
+          </div>
+
+          <div class="signin-container">
+            <div class="check-box">
+              <input type="checkbox" name="" id="check2" class="check-input" />
+              <label for="check2" class="check-label">Remember me </label>
+            </div>
+            <div class="forgot-password">
+              <p>Forgot Password?</p>
+            </div>
+          </div>
+
+          <button type="submit" class="sign-in-submit">Sign in</button>
+        </form>
+
+        <p id="p6">
+          Don't have an account? <span class="create-acct">Sign up</span>
+        </p>
+      </div>
+    </div>
+
+    <footer class="overlay-footer">
+      <div class="subscribe">
+        <h4>Subscribe to our newsletter</h4>
+        <p>
+          Get Latest updates on the newest celebrities and best deals on BUZZ IT
+        </p>
+        <input
+          type="email"
+          placeholder="Enter Email Address"
+          class="mail-input"
+        />
+        <button type="submit">SUBSCRIBE</button>
+        <div class="social-icons">
+          <i class="bx bxl-instagram-alt" style="color: #9428f9"></i>
+          <i class="bx bxl-facebook-circle" style="color: #9428f9"></i>
+          <i class="bx bxl-twitter" style="color: #9428f9"></i>
+          <i class="bx bxl-linkedin-square" style="color: #9428f9"></i>
+          <i class="bx bxl-youtube" style="color: #9428f9"></i>
+        </div>
+      </div>
+      <div class="links">
+        <ul>
+          <li>FAQ</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li>Blogs</li>
+          <li>Press</li>
+          <li>Help</li>
+          <li>For Business</li>
+        </ul>
+      </div>
+      <div class="celebrity-sign-up">
+        <p>Sign up as a Celebrity</p>
+        <button>Become A CELEBRITY</button>
+        <p class="copyright">&copy; 2017-2021, BUZZ IT. All Right Reserved.</p>
+      </div>
+    </footer>
+    <script src="sign-in.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
