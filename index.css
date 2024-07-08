@@ -760,7 +760,7 @@ form input:focus {
 }
 .login-request {
   position: absolute;
-  width: 50%;
+  width: 40%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
